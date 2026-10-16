@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | ExamPortal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <div class="auth-card">
+
+        <div class="auth-logo">
+
+            <div
+                class="logo"
+                style="color:#111827;"
+            >
+                Exam<span>Portal</span>
+            </div>
+
+        </div>
+
+
+        <h1>Welcome back 👋</h1>
+
+        <p>
+            Login to continue to your exam dashboard.
+        </p>
+
+
+        <div id="message"></div>
+
+
+        <form id="loginForm">
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width:100%;"
+            >
+                Login
+            </button>
+
+        </form>
+
+
+        <div class="divider"></div>
+
+
+        <p style="text-align:center; margin:0;">
+
+            New student?
+
+            <a
+                href="register.html"
+                style="
+                    color:#4f46e5;
+                    font-weight:700;
+                "
+            >
+                Create an account
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="js/api.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+
+</html>

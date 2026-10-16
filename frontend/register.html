@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Register | ExamPortal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <div class="auth-card">
+
+        <div class="auth-logo">
+
+            <div
+                class="logo"
+                style="color:#111827;"
+            >
+                Exam<span>Portal</span>
+            </div>
+
+        </div>
+
+
+        <h1>Create Account 🚀</h1>
+
+        <p>
+            Register as a student and start your examinations.
+        </p>
+
+
+        <div id="message"></div>
+
+
+        <form id="registerForm">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create a password"
+                    minlength="6"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width:100%;"
+            >
+                Create Account
+            </button>
+
+        </form>
+
+
+        <div class="divider"></div>
+
+
+        <p style="text-align:center; margin:0;">
+
+            Already have an account?
+
+            <a
+                href="login.html"
+                style="
+                    color:#4f46e5;
+                    font-weight:700;
+                "
+            >
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="js/api.js"></script>
+<script src="js/register.js"></script>
+
+</body>
+
+</html>
