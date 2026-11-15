@@ -1,3 +1,4 @@
+
 const Exam = require("../models/Exam");
 const Attempt = require("../models/Attempt");
 
@@ -663,7 +664,8 @@ const updateExam = async (
             title,
             description,
             durationMinutes,
-            isPublished
+            isPublished,
+            questions
         } = req.body;
 
 
@@ -722,14 +724,49 @@ const updateExam = async (
         }
 
 
+        // SAVE QUESTIONS SENT BY ADMIN PANEL
+        if (
+            questions !== undefined
+        ) {
+
+            if (!Array.isArray(questions)) {
+
+                return res.status(400).json({
+
+                    message:
+                        "Questions must be an array."
+
+                });
+            }
+
+            exam.questions =
+                questions;
+        }
+
+
         if (
             isPublished !== undefined
         ) {
 
+            const publishValue =
+                isPublished === true ||
+                isPublished === "true";
+
+            if (
+                publishValue &&
+                (!exam.questions || exam.questions.length === 0)
+            ) {
+
+                return res.status(400).json({
+
+                    message:
+                        "Add at least one question before publishing this exam."
+
+                });
+            }
+
             exam.isPublished =
-                Boolean(
-                    isPublished
-                );
+                publishValue;
 
         }
 
